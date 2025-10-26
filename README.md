@@ -6,7 +6,9 @@ I captured and analyzed network traffic with Wireshark to verify the scan activi
 
 I summarized the findings and recommended basic mitigations for any exposed services or suspicious network behavior.
 
+
 **Tools used**
+
 
 **1)Nmap**
 
@@ -18,7 +20,9 @@ I summarized the findings and recommended basic mitigations for any exposed serv
 
 *Nmap helps to find weaknesses in a network. 
 
+
 **2)Wireshark **
+
 
 *Wireshark is a tool used to capture network traffic. 
 
@@ -27,6 +31,8 @@ I summarized the findings and recommended basic mitigations for any exposed serv
 *We can see which devices are talking and what information is sent.
 
 *Wireshark helps to check scans and understand network activity. 
+
+
 
 **Commands I ran during scanning using Nmap **
 
@@ -58,7 +64,9 @@ sudo nmap -sU --top-ports 50 <ip address>
 This is a UDP scan that checks the 50 most common UDP ports across the whole subnet. I used it to quickly find common UDP services (like DNS or SNMP) that TCP scans can miss. 
 
 
+
 **Wireshark: how I captured and verified packets **
+
 
 1. Started Wireshark capture on my active network interface before running the Nmap scans.
   
@@ -74,7 +82,10 @@ This is a UDP scan that checks the 50 most common UDP ports across the whole sub
 
   *ARP (to map MAC addresses): arp 
 
+  
+
 **OUTPUT**
+
 
 #I learned to use Nmap to perform TCP SYN scans, full port scans, and UDP top-port scans to discover hosts and services on my local network. 
 
