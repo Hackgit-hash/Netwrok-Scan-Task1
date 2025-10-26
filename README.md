@@ -37,7 +37,9 @@ I summarized the findings and recommended basic mitigations for any exposed serv
 
 **Commands I ran during scanning using Nmap**
 
+
 I ran these commands from Kali terminal during the task. 
+
 
 **1)TCP SYN scan (subnet)**
 
