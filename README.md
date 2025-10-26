@@ -21,7 +21,8 @@ I summarized the findings and recommended basic mitigations for any exposed serv
 *Nmap helps to find weaknesses in a network. 
 
 
-**2)Wireshark **
+
+**2)Wireshark**
 
 
 *Wireshark is a tool used to capture network traffic. 
@@ -34,30 +35,30 @@ I summarized the findings and recommended basic mitigations for any exposed serv
 
 
 
-**Commands I ran during scanning using Nmap **
+**Commands I ran during scanning using Nmap**
 
 I ran these commands from Kali terminal during the task. 
 
-**1)TCP SYN scan (subnet) **
+**1)TCP SYN scan (subnet)**
 
-**Command **
+**Command**
 
 sudo nmap -sS <ip address>
 
 This is a TCP SYN (half-open) scan of the subnet. I used it because it is fast and effective for finding open TCP ports on many hosts while leaving less trace than a full connect scan. 
 
-**2) Full TCP port scan on a host (all ports, faster) **
+**2)Full TCP port scan on a host (all ports, faster)**
 
-**Command **
+**Command**
 
 sudo nmap -sS -p- -T4 <ip address> 
 
 This scans all 65,535 TCP ports on a single host with faster timing. I used it to find services on non-standard ports when a host looked interesting, but I used -T4 cautiously since it is noisier and may trigger security 
 devices. 
 
-**3) UDP top 50 ports (network scan)**
+**3)UDP top 50 ports (network scan)**
    
-**Command **
+**Command**
 
 sudo nmap -sU --top-ports 50 <ip address>  
 
@@ -65,7 +66,9 @@ This is a UDP scan that checks the 50 most common UDP ports across the whole sub
 
 
 
-**Wireshark: how I captured and verified packets **
+**Wireshark**
+
+How I captured and verified packets**
 
 
 1. Started Wireshark capture on my active network interface before running the Nmap scans.
